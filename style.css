@@ -1,4 +1,4 @@
-/* ===== Thème clair (celui de portfolio1.css) ===== */
+/* ===== Thème clair ===== */
 :root {
   --bg: #eeeeee;
   --bg-image: none;
@@ -20,7 +20,7 @@
   --btn-border: rgba(255, 255, 255, 0.5);
 }
 
-/* ===== Thème sombre (celui de portfolio1 copy.css) ===== */
+/* ===== Thème sombre ===== */
 :root[data-theme="dark"] {
   --bg: #101620;
   --bg-image: url("fond.png");
@@ -86,7 +86,6 @@ body {
   text-decoration: underline;
 }
 
-/* Bouton de changement de thème */
 #theme-toggle {
   padding: 6px 12px;
   background-color: var(--btn-bg);
@@ -100,11 +99,6 @@ body {
 
 #theme-toggle:hover {
   background-color: var(--btn-border);
-}
-
-#theme-toggle:focus-visible {
-  outline: 2px solid white;
-  outline-offset: 2px;
 }
 
 #contenu {
