@@ -104,23 +104,28 @@
       <p>[Résumé en quelques phrases.]</p>
     </div>
 
-    <div id="contact">
-      <h2>Contact</h2>
-      <p>Mon adresse mail : yohann.louber-gardier@ltpdampierre.fr</p>
+<div id="contact">
+  <h2>Contact</h2>
 
-      <form action="mailto:yohann.louber-gardier@ltpdampierre.fr" method="post" enctype="text/plain">
-        <label for="nom">Nom :</label>
-        <input id="nom" type="text" name="nom" required>
-        <br>
-        <label for="email">E-mail :</label>
-        <input id="email" type="email" name="email" required>
-        <br>
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" required></textarea>
-        <br>
-        <input type="submit" value="Envoyer">
-      </form>
-    </div>
+  <form action="https://formsubmit.co/yohann.louber-gardier@ltpdampierre.fr" method="POST">
+    <label for="nom">Nom :</label>
+    <input id="nom" type="text" name="nom" required>
+    <br>
+    <label for="email">E-mail :</label>
+    <input id="email" type="email" name="email" required>
+    <br>
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" required></textarea>
+    <br>
+
+    <!-- Options FormSubmit -->
+    <input type="hidden" name="_subject" content="Nouveau message depuis mon portfolio">
+    <input type="hidden" name="_captcha" value="true">
+    <input type="text" name="_honey" style="display:none">
+
+    <input type="submit" value="Envoyer">
+  </form>
+</div>
 
   </div>
 
