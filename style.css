@@ -19,7 +19,7 @@
   --btn-bg: rgba(255, 255, 255, 0.15);
   --btn-border: rgba(255, 255, 255, 0.5);
 }
- 
+
 /* ===== Thème sombre (celui de portfolio1 copy.css) ===== */
 :root[data-theme="dark"] {
   --bg: #101620;
@@ -42,29 +42,30 @@
   --btn-border: #4da3ff;
 }
 
-
 body {
   margin: 0;
-  background-color: #101620;
-  background-image: url("fond.png");;
-  color: #e6e9ee;
+  background-color: var(--bg);
+  background-image: var(--bg-image);
+  color: var(--text);
   font-family: Arial, sans-serif;
 }
 
 #entete {
   padding: 30px;
-  background-color: #0b0f16;
-  border-bottom: 2px solid #4da3ff;
+  background-color: var(--entete-bg);
+  border-bottom: 2px solid var(--entete-border);
   color: white;
   text-align: center;
 }
 
 #menu {
-  background-color: #182030;
+  background-color: var(--menu-bg);
 }
 
 #menu ul {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -81,11 +82,34 @@ body {
 }
 
 #menu a:hover {
-  color: #4da3ff;
+  color: var(--menu-hover);
+  text-decoration: underline;
+}
+
+/* Bouton de changement de thème */
+#theme-toggle {
+  padding: 6px 12px;
+  background-color: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  border-radius: 6px;
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  background-color: var(--btn-border);
+}
+
+#theme-toggle:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 #contenu {
-  width: 800px;
+  max-width: 800px;
+  width: 90%;
   margin: 20px auto;
 }
 
@@ -98,40 +122,41 @@ body {
 #contact {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #1a2332;
-  border: 1px solid #2c3a4d;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
 }
 
 h2 {
-  color: white;
+  color: var(--h2);
 }
 
 h3 {
-  color: #4da3ff;
+  color: var(--h3);
 }
 
 a {
-  color: #4da3ff;
+  color: var(--link);
 }
 
 span {
   font-weight: bold;
-  color: white;
+  color: var(--strong);
 }
 
 textarea {
   width: 300px;
+  max-width: 100%;
   height: 100px;
 }
 
 #pied {
   padding: 15px;
-  background-color: #0b0f16;
-  border-top: 2px solid #4da3ff;
+  background-color: var(--pied-bg);
+  border-top: 2px solid var(--pied-border);
   color: white;
   text-align: center;
 }
 
 #pied a {
-  color: #4da3ff;
+  color: var(--pied-link);
 }
