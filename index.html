@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
+<html lang="fr" data-theme="dark"><head>
   <meta charset="UTF-8">
   <title>Portfolio Yohann Louber</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "light" || t === "dark") {
+      document.documentElement.setAttribute("data-theme", t);
+    }
+  } catch (e) {}
+</script>
 </head>
 <body>
 
@@ -21,6 +29,8 @@
       <li><a href="#competences">Compétences</a></li>
       <li><a href="#veille">Veille</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="theme-toggle" type="button">Thème clair</button></li>
     </ul>
   </div>
 
@@ -134,6 +144,25 @@
     <p>Portfolio de Yohann Louber - BTS SIO SISR</p>
     <a href="#entete">Haut de la page</a>
   </div>
+  
+  <script>
+  var bouton = document.getElementById("theme-toggle");
+  var racine = document.documentElement;
 
+  function majBouton() {
+    bouton.textContent = racine.getAttribute("data-theme") === "dark"
+      ? "Thème clair"
+      : "Thème sombre";
+  }
+
+  bouton.addEventListener("click", function () {
+    var nouveau = racine.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    racine.setAttribute("data-theme", nouveau);
+    try { localStorage.setItem("theme", nouveau); } catch (e) {}
+    majBouton();
+  });
+
+  majBouton();
+</script>
 </body>
 </html>
