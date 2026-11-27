@@ -1,3 +1,48 @@
+/* ===== Thème clair (celui de portfolio1.css) ===== */
+:root {
+  --bg: #eeeeee;
+  --bg-image: none;
+  --text: #222222;
+  --entete-bg: #1f3a5f;
+  --entete-border: #1f3a5f;
+  --menu-bg: #2f5d8c;
+  --menu-hover: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #cccccc;
+  --h2: #1f3a5f;
+  --h3: #2f5d8c;
+  --link: #2f5d8c;
+  --strong: #222222;
+  --pied-bg: #1f3a5f;
+  --pied-border: #1f3a5f;
+  --pied-link: #ffffff;
+  --btn-bg: rgba(255, 255, 255, 0.15);
+  --btn-border: rgba(255, 255, 255, 0.5);
+}
+ 
+/* ===== Thème sombre (celui de portfolio1 copy.css) ===== */
+:root[data-theme="dark"] {
+  --bg: #101620;
+  --bg-image: url("fond.png");
+  --text: #e6e9ee;
+  --entete-bg: #0b0f16;
+  --entete-border: #4da3ff;
+  --menu-bg: #182030;
+  --menu-hover: #4da3ff;
+  --card-bg: #1a2332;
+  --card-border: #2c3a4d;
+  --h2: #ffffff;
+  --h3: #4da3ff;
+  --link: #4da3ff;
+  --strong: #ffffff;
+  --pied-bg: #0b0f16;
+  --pied-border: #4da3ff;
+  --pied-link: #4da3ff;
+  --btn-bg: rgba(77, 163, 255, 0.12);
+  --btn-border: #4da3ff;
+}
+
+
 body {
   margin: 0;
   background-color: #101620;
